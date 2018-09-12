@@ -1,0 +1,11 @@
+{
+  "language": "en",
+  "lexicons": {
+    "polarity":    {"filename": "lexicon.tsv",      "token_separator": "+", "parts_separator": "..", "delimiter": "\t"},
+    "shifter":     {"filename": "shifters.tsv",     "token_separator": "+", "parts_separator": "..", "delimiter": "\t"},
+    "intensifier": {"filename": "intensifiers.tsv", "token_separator": "+", "parts_separator": "..", "delimiter": "\t"}
+  },
+  "reader"      : "sentilex.readers.lexicon_reader_csv.LexiconReaderCsv",
+  "preprocessor": "sentilex.preprocessors.preprocessor_spacy.SpacyPreprocessor",
+  "tagger"      : "sentilex.taggers.regex_tagger.RegexTagger"
+}
