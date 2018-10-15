@@ -13,12 +13,7 @@ Lexicon-based Sentiment Analysis
 Installation / Usage
 --------------------
 
-To install use pip:
-
-    $ pip install sentilex
-
-
-Or clone the repo:
+To install clone the repo:
 
     $ git clone https://github.com/esrel/sentilex.git
     $ python setup.py install
@@ -31,4 +26,5 @@ TBD
 Example
 -------
 
-TBD
+python run.py -d example/temp.txt -c example/config.json
+(see file contents)
