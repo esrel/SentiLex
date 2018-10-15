@@ -3,12 +3,6 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from builtins import str
-from typing import Text, List, Dict, Any
-
-import logging
-
-import re
 import csv
 import os
 
@@ -16,6 +10,7 @@ from sentilex.readers import Reader
 from sentilex.lexicons import Lexeme
 from sentilex import utils
 
+import logging
 import argparse
 
 logger = logging.getLogger(__name__)

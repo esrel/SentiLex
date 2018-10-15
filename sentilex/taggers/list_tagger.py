@@ -3,14 +3,10 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from builtins import str
-from typing import Text, List, Dict, Any
-
 from sentilex.taggers import Tagger
 from sentilex.readers.lexicon_reader_csv import LexiconReaderCsv
 from sentilex.utils.span_utils import consolidate_spans
 
-import numpy as np
 import copy
 
 import logging

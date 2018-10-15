@@ -3,9 +3,7 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from builtins import str
-from typing import Text, List, Dict, Any
-
+from sentilex.utils import add_logging_arguments, configure_colored_logging
 from sentilex.preprocessors import Preprocessor
 
 import spacy
@@ -29,3 +27,24 @@ class SpacyPreprocessor(Preprocessor):
     def process(self, text):
         doc = self.nlp(text.strip())
         return ' '.join([w.lemma_ for w in doc])
+
+
+def create_argument_parser():
+    parser = argparse.ArgumentParser(description='Text Lemmatizer')
+    parser.add_argument('-d', '--data',     type=str)
+    parser.add_argument('-l', '--language', type=str, default='en')
+    add_logging_arguments(parser)
+    return parser
+
+
+if __name__ == "__main__":
+    parser = create_argument_parser()
+    args = parser.parse_args()
+    configure_colored_logging(args.loglevel)
+
+    pp = SpacyPreprocessor(language=args.language)
+
+    with open(args.data) as fh:
+        for row in fh:
+            out = pp.process(row)
+            print(out)

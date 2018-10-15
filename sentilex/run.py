@@ -3,16 +3,9 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from builtins import str
-from typing import Text, List, Dict, Any
-
 from sentilex.utils import add_logging_arguments, configure_colored_logging
 from sentilex.scorers.shifter_scorer import ShifterScorer
 from sentilex.scorers import nominalize
-
-import string
-import copy
-import re
 
 import logging
 import argparse

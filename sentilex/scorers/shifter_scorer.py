@@ -3,18 +3,15 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from builtins import str
-from typing import Text, List, Dict, Any
-
 from sentilex.scorers import Scorer
 from sentilex.taggers.strtype_tagger import StringTypeTagger
 from sentilex.utils import get_class_from_path
 from sentilex.utils import add_logging_arguments, configure_colored_logging
 
+import json
+
 import logging
 import argparse
-import os
-import json
 
 logger = logging.getLogger(__name__)
 

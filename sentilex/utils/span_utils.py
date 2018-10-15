@@ -3,12 +3,9 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from builtins import str
-from typing import Text, List, Dict, Any
+from collections import Counter
 
 import random
-
-from collections import Counter
 
 
 def consolidate_spans(tags):
