@@ -2,6 +2,7 @@ SentiLex
 ===============================
 
 version number: 0.0.1
+
 author: Evgeny A. Stepanov
 
 Overview
