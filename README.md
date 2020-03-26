@@ -26,7 +26,7 @@ TBD
 Example
 -------
 
-python run.py -d example/temp.txt -c example/config.json
+    $ python run.py -d example/temp.txt -c example/config.json
 (see file contents)
 
 References
