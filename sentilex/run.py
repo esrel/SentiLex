@@ -1,11 +1,5 @@
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
 from sentilex.utils import add_logging_arguments, configure_colored_logging
 from sentilex.scorers.shifter_scorer import ShifterScorer
-from sentilex.scorers import nominalize
 
 import logging
 import argparse
@@ -32,9 +26,4 @@ if __name__ == "__main__":
     with open(args.data) as fh:
         for row in fh:
             score = scorer.score(row)
-            print('Text "{}" is "{}" with score = {}'.format(row.strip(), nominalize(score), score))
-
-
-
-
-
+            print('Text "{}" is "{}" with score = {}'.format(row.strip(), scorer.nominalize(score), score))
